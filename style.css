@@ -454,14 +454,29 @@ body {
     margin: 5px 0;
   }
 }
-/* Navbar Responsif */
+/* Menu Hamburger */
+.menu-toggle {
+  display: none; /* Sembunyikan di desktop */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #E0E0E0;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsif Navbar */
 @media (max-width: 768px) {
-  nav {
-    padding: 20px 5%;
+  .menu-toggle {
+    display: flex; /* Tampilkan di mobile */
   }
 
-  nav .nav-links {
-    display: none;
+  .nav-links {
+    display: none; /* Sembunyikan menu di mobile */
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -471,24 +486,12 @@ body {
     text-align: center;
   }
 
-  nav .nav-links.active {
-    display: flex;
+  .nav-links.active {
+    display: flex; /* Tampilkan menu saat aktif */
   }
 
-  nav .nav-links li {
+  .nav-links li {
     margin: 10px 0;
-  }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #E0E0E0;
-    margin: 5px 0;
   }
 }
 /* Hero Section Responsif */
