@@ -50,6 +50,6 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active'); // Tambahkan class active ke menu-toggle
+  navLinks.classList.toggle('active'); // Buka/tutup menu
+  menuToggle.classList.toggle('active'); // Animasi tombol hamburger
 });
