@@ -37,7 +37,7 @@ document.querySelector('.contact form').addEventListener('submit', function(e) {
     message: document.querySelector('textarea[name="message"]').value
   };
 
-  emailjs.send('{your-service-id}', '{your-template-id}', formData)
+  emailjs.send('service_h45f5c', 'template_hdqjq9i', formData)
     .then(function(response) {
       alert('Message sent successfully!');
       document.querySelector('.contact form').reset();
