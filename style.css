@@ -263,6 +263,23 @@ body {
     width: 300px;
     border-radius: 10px;
   }
+  /* About Section Responsif */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
   
   /* Skills Section */
   .skills {
@@ -287,7 +304,13 @@ body {
     background-color: #00FF88;
     height: 100%;
   }
-  
+  /* Skills Section Responsif */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
  /* Projects Section */
 .projects {
   padding: 50px 10%;
@@ -347,6 +370,16 @@ body {
 .carousel-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+/* Projects Section Responsif */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-button {
+    display: none;
+  }
+}
   
   /* Contact Section */
   .contact {
@@ -390,6 +423,12 @@ body {
   .contact button:hover {
     background-color: #00CC66;
   }
+  /* Contact Section Responsif */
+@media (max-width: 768px) {
+  .contact form {
+    width: 90%;
+  }
+}
   
   /* Footer */
   footer {
@@ -405,3 +444,83 @@ body {
   .social-links a {
     margin: 0 10px;
   }
+  /* Footer Responsif */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-links a {
+    margin: 5px 0;
+  }
+}
+/* Navbar Responsif */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 5%;
+  }
+
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1A2A3A;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  nav .nav-links li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #E0E0E0;
+    margin: 5px 0;
+  }
+}
+/* Hero Section Responsif */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .cta {
+    padding: 8px 16px;
+  font-size: 14px;
+  }
+}
+/* General Responsif */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
