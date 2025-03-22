@@ -45,3 +45,10 @@ document.querySelector('.contact form').addEventListener('submit', function(e) {
       alert('Failed to send message. Please try again.');
     });
 });
+// Toggle menu for mobile
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
