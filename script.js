@@ -50,6 +50,14 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active'); // Buka/tutup menu
-  menuToggle.classList.toggle('active'); // Animasi tombol hamburger
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+
+// Menutup menu saat mengklik di luar area menu
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.menu-toggle') && !event.target.closest('.nav-links')) {
+    navLinks.classList.remove('active');
+    menuToggle.classList.remove('active');
+  }
 });
