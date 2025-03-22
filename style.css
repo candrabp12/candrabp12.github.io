@@ -456,9 +456,10 @@ body {
 }
 /* Menu Hamburger */
 .menu-toggle {
-  display: none;
+  display: none; /* Sembunyikan di desktop */
   flex-direction: column;
   cursor: pointer;
+  z-index: 1000; /* Pastikan tombol di atas elemen lain */
 }
 
 .menu-toggle .bar {
@@ -466,17 +467,17 @@ body {
   height: 3px;
   background-color: #E0E0E0;
   margin: 4px 0;
-  transition: 0.4s;
+  transition: 0.4s; /* Animasi transisi */
 }
 
 /* Responsif Navbar */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
+    display: flex; /* Tampilkan di mobile */
   }
 
   .nav-links {
-    display: none;
+    display: none; /* Sembunyikan menu di mobile */
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -488,7 +489,7 @@ body {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* Tampilkan menu saat aktif */
   }
 
   .nav-links li {
@@ -496,7 +497,7 @@ body {
   }
 }
 
-/* Animasi Menu Hamburger */
+/* Animasi Menu Hamburger saat aktif */
 .menu-toggle.active .bar:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
