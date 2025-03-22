@@ -32,8 +32,8 @@ document.querySelector('.contact form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const formData = {
-    name: document.querySelector('input[name="Gmail"]').value,
-    email: document.querySelector('input[name="email"]').value,
+    name: document.querySelector('input[name='name']').value,
+    email: document.querySelector('input[name='email']').value,
     message: document.querySelector('textarea[name="message"]').value
   };
 
